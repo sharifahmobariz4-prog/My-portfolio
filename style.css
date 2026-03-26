@@ -2,9 +2,11 @@
 body {
 font-family: 'Trirong', serif;
 transition: background 0.3s ease, color 0.3s ;
+overflow-x: hidden;
 }
 html{
 scroll-behavior:smooth;
+overflow-y: scroll;
 }
 
 :root{
@@ -139,8 +141,7 @@ background:var(--section-bg);
 color:var(--text-color);
 opacity:0;
 transform:translateY(40px);
-transition:all 0.8s ease;
-}
+transition: opacity 0.6s ease, transform 0.6s ease;
 .section.show{
 opacity:1;
 transform:translateY(0);
@@ -151,10 +152,9 @@ transform:translateY(0);
 background:var(--navbar-bg);
 padding:12px 0;
 border-bottom:2px solid var(--accent);
-transition: none;
 display: flex;
 align-items: center;
-  position: fixed;
+ position: fixed;
 width: 100%;
 left: 0;
 top: 0;
@@ -164,7 +164,6 @@ z-index: 9999;
 color:var(--navbar-text) !important;
 font-weight:500;
 margin:0 15px;
-transition:0.3s;
 }
 
 .nav-link:hover{
