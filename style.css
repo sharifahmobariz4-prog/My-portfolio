@@ -1,12 +1,7 @@
 
 body {
 font-family: 'Trirong', serif;
-transition: background 0.3s ease, color 0.3s ;
 }
-html{
-scroll-behavior:smooth;
-}
-
 :root{
 
 --bg-color:#082c6c;
@@ -134,30 +129,26 @@ body {
   }
 
   .navbar-toggler {
-    z-index: 1100;
-    position: relative;
+position: fixed;
+top: 15px;
+right: 15px;
+z-index: 1200; 
+ border-color: black; 
   }
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-collapse {
   transition: height 0.3s ease !important;
 }
-.section, .card {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-.section.show, .card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+
 .section{
 background:var(--section-bg);
 color:var(--text-color);
 opacity:0;
 transform:translateY(40px);
-transition:all 0.8s ease;
-}
+transition: opacity 0.8s ease, transform 0.8s ease;
 .section.show{
 opacity:1;
 transform:translateY(0);
@@ -559,9 +550,9 @@ text-decoration:none;
 transition:0.3s;
 }
 
-.social-icons a:hover{
-background:var(--btn-hover);
+.social-icons a:hover{background:var(--btn-hover);
 color:white;
 transform:scale(1.1);
 box-shadow:var(--hover-shadow);
 }
+
