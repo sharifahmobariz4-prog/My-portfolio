@@ -155,10 +155,7 @@ transition: none;
 display: flex;
 align-items: center;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1030; 
+
 }
 .nav-link{
 color:var(--navbar-text) !important;
