@@ -129,6 +129,15 @@ body {
 .navbar-toggler {
     border-color: black; 
 }
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+@media (max-width: 991px) {
+  .section, .card {
+    transition: none !important; 
+  }
+}
 .section{
 background:var(--section-bg);
 color:var(--text-color);
@@ -149,6 +158,11 @@ border-bottom:2px solid var(--accent);
 transition: none;
 display: flex;
 align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030; 
 }
 .nav-link{
 color:var(--navbar-text) !important;
